@@ -2,6 +2,7 @@ Brraaaiiins!
 
     Zombie = require("zombie").Zombie;
     z = new Zombie();
+    connect = require("connect");
     
     z.configure({
         src: __dirname + "/src/",
@@ -30,4 +31,8 @@ Brraaaiiins!
         partials: ["header", "footer"]
     });
     
-    console.log(z.render("index"));
+    app = connect()
+         .use(connect.logger("dev"))
+         .use(connect.static(__dirname + "/src"))
+         .use(z.connect())
+         .listen(3000);

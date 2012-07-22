@@ -14,5 +14,8 @@
     "build"
   ],
   "author": "monai",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "0.8.x"
+  }
 }

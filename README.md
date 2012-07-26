@@ -1,12 +1,12 @@
 Brraaaiiins!
-
+    
+    var Zombie, z, connect, app;
     Zombie = require("zombie").Zombie;
     z = new Zombie();
     connect = require("connect");
     
     z.configure({
-        src: __dirname + "/src/",
-        dist: __dirname + "/dist/",
+        base: __dirname + "/src/"
     });
     
     z.partial({

@@ -6,7 +6,7 @@ Brraaaiiins!
     connect = require("connect");
     
     z.configure({
-        base: __dirname + "/src/"
+        base: __dirname + "/src"
     });
     
     z.partial({

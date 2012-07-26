@@ -1,12 +1,11 @@
 Brraaaiiins!
     
-    var Zombie, z, connect, app;
+    var Zombie, z;
     Zombie = require("zombie").Zombie;
     z = new Zombie();
-    connect = require("connect");
     
     z.configure({
-        base: __dirname + "/src"
+        src: __dirname + "/src"
     });
     
     z.partial({
@@ -31,8 +30,8 @@ Brraaaiiins!
         partials: ["header", "footer"]
     });
     
-    app = connect()
-         .use(connect.logger("dev"))
-         .use(connect.static(__dirname + "/src"))
-         .use(z.connect())
-         .listen(3000);
+    z.run();
+
+Rise zombie:
+
+    node ./app.js serve

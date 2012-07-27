@@ -1,36 +1,32 @@
 Brraaaiiins!
+
+    var Zombie = require("zombie").Zombie;
     
-    var Zombie, z;
-    Zombie = require("zombie").Zombie;
-    z = new Zombie();
-    
-    z.configure({
-        src: __dirname + "/src"
-    });
-    
-    z.partial({
-        name: "header",
-        file: "_header.html"
-    });
-    
-    z.partial({
-        name: "footer",
+    Zombie()
+    .partial({
+        file: "_header.html",
+        partials: ["subheader"]
+    })
+    .partial({
+        file: "_subheader.html",
+    })
+    .partial({
         file: "_footer.html"
-    });
-    
-    z.partial({
-        name: "layout",
+    })
+    .partial({
         file: "_layout.html"
-    });
-    
-    z.page({
-        name: "index",
+    })
+    .page({
         file: "index.html",
         layout: "layout",
         partials: ["header", "footer"]
-    });
-    
-    z.run();
+    })
+    .page({
+        file: "other.html",
+        layout: "layout",
+        partials: ["header", "footer"]
+    })
+    .run();
 
 Rise zombie:
 

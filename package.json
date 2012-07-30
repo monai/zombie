@@ -1,6 +1,6 @@
 {
   "name": "zombie",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A node.js module for web UI developers. Turns HTML templates into website witch is not living nor dead.",
   "main": "index.js",
   "scripts": {

@@ -2,7 +2,7 @@ Brraaaiiins!
 
     var Zombie = require("zombie").Zombie;
     
-    Zombie()
+    module.exports = Zombie()
     .partial({
         file: "_header.html",
         partials: ["subheader"]
@@ -26,7 +26,7 @@ Brraaaiiins!
         layout: "layout",
         partials: ["header", "footer"]
     })
-    .run();
+    .run(__filename);
 
 Rise zombie:
 

@@ -14,8 +14,8 @@ module.exports = function(grunt) {
         }
         
         conf = data.conf;
-        conf = Object.keys(conf).map(function(key) {
-            return grunt.template.process(conf[key]);
+        Object.keys(conf).forEach(function(key) {
+            conf[key] = grunt.template.process(conf[key]);
         });
         zombie.setConf(conf);
         
